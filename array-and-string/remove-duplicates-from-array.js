@@ -16,7 +16,14 @@ function removeDuplicates(items) {
   });
 }
 
+// Using Set
+
+function removeDuplicates(items) {
+  const uniqueNo = new Set(items);
+
+  return Array.from(uniqueNo).join(",");
+}
+
 const arr1 = [1, 2, 44, 55, 44];
 const arr2 = ["m", "a", "b", "f", "f"];
-console.log(removeDuplicates(arr1)); // ["maruf", "alom", "bappy"]; // 3 item
-// removeDuplicates(arr2);
+console.log(removeDuplicates(arr1));
